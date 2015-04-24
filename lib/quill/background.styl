@@ -1,0 +1,98 @@
+/////////////////////////
+/////  BACKGROUND //////
+
+background()
+  $color    = $imgs = $rpt_vals = $att_vals = $pos_val = $sz_val = null
+  $rpts     = no-repeat repeat repeat-x repeat-y 
+  $attaches = scroll local
+  $pos      = top bottom right left center
+  $i        = 0
+  $sizes    = cover contain
+  $clip     = border-box padding-box content-box initial
+
+  for arg in arguments
+    /////  ONE ARGUMENT  /////
+    if (length(arg) == 1)
+      
+      //  BACKGROUND-COLOR 
+      if (typeof(arg) == 'rgba')
+        $color = arg
+      //  BACKGROUND-COLOR 
+
+      //  BACKGROUND-IMAGE
+      if ((typeof(arg) == 'call') or (typeof(arg) == 'string'))
+        if (typeof(arg) == 'string')
+          arg = unquote("url(%s)" % arg)
+        if ($imgs)
+          push($imgs, arg)
+        else
+          $imgs = arg
+      //  BACKGROUND-IMAGE
+
+      //  BACKGROUND-REPEAT
+      if  (typeof(arg) == 'ident') and (arg in ($rpts))
+        if ($rpt_vals)
+          push($rpt_vals, arg)
+        else
+          $rpt_vals = arg
+      //  BACKGROUND-REPEAT
+
+      //  BACKGROUND-ATTACHMENT
+      if  (typeof(arg) == 'ident') and ((arg in $attaches) or (arg == fixed))
+        if ($att_vals)
+          push($att_vals, arg)
+        else
+          $att_vals = arg
+      //  BACKGROUND-ATTACHMENT
+
+      //  BACKGROUND-POSITION
+      if  ( typeof( arg ) == 'ident' ) and ( arg in $pos )
+        if ( $pos_val )
+          if ( even( $i ) )
+            push( $pos_val, convert(',') )
+          push( $pos_val, arg )
+        else
+          $pos_val = arg
+      $i = $i + 1
+      //  BACKGROUND-POSITION
+
+      //  BACKGROUND-SIZE
+      if  ( typeof( arg ) == 'ident' ) and ( arg in $sizes )
+        $sz_val = arg
+
+    /////  MORE ARGUMENTS  //////
+    else if ( length( arg ) > 1 )
+      //  BACKGROUND POSITION / SIZE
+      $pz_val  = null
+      $pz_type = null
+      for val in arg
+        if ( typeof( val ) == 'ident' )
+          $pz_type = val
+        if ( typeof( val ) == 'unit' )
+          if ( $pz_val )
+            push( $pz_val, val )
+          else
+            $pz_val = val
+      if ( $pz_type in ( 'ps' 'pos' 'position' ) )
+        $pos_val = $pz_val
+      if ( $pz_type in ( 'sz' 'size' ) )
+        $sz_val = $pz_val
+
+  //  SETING VALUES
+  if ($color)
+    background-color:      $color
+  if ($imgs)
+    background-image:      unquote(join(", ", $imgs))
+  if ($rpt_vals)
+    background-repeat:     unquote( join(", ", $rpt_vals))
+  if ( $att_vals ) 
+    background-attachment: unquote( join(", ", $att_vals))  
+  if ( $sz_val )
+    background-size:       $sz_val
+  if ( $pos_val ) 
+    background-position:   $pos_val
+
+bg()
+  background arguments
+/////  BACKGROUND //////
+///////////////////////  
