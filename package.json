@@ -1,18 +1,18 @@
 {
-  "name": "stylus-quill",
+  "name": "quills",
   "version": "0.0.12",
   "description": "Mixins, utilidades, componentes y generadores de estilos css, para mejorar la experiencia de Stylus",
-  "main": "lib/quill.js",
+  "main": "lib/quills.js",
   "scripts": {
   	"preinstall": "npm install -g stylus",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/threenode/Quill.git"
+    "url": "https://github.com/threenode/quills.git"
   },
   "keywords": [
-  	"quill",
+  	"quills",
     "css",
     "stylus",
     "mixins"
@@ -23,9 +23,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/threenode/Quill/issues"
+    "url": "https://github.com/threenode/quills/issues"
   },
-  "homepage": "https://github.com/threenode/Quill",
+  "homepage": "https://github.com/threenode/quills",
   "engines": {
     "node": "*"
   }

@@ -1,19 +1,19 @@
-# Quill
+# Quills
 ---
 Mixins, utilidades, componentes y generadores de estilos css, para mejorar la experiencia de Stylus
 
 
 ## Instalacion
-desde la consola, teniendo instalado nodejs con npm ejecutas:
-`$ npm install stylus-quill -g`
+Desde consola, teniendo instalado nodejs con npm ejecutas:
+`$ npm install quills -g`
 
 
 ## Uso
-Importa la libreria en tu archio .styl
+Importa la libreria en tu archivo .styl
 ```
-@import "qill"
+@import "quills"
 ```
-Compila tu archivo .styl con stylus usando quill
+Compila tu archivo .styl con stylus usando quills
 ```
-$ stylus -u quill archivo.styl
+$ stylus -u quills archivo.styl
 ```
