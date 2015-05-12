@@ -1,5 +1,5 @@
-/////////////////////////
-/////  BACKGROUND //////
+////////////////////////////////
+/////  BACKGROUND MIXIN  //////
 
 background()
   $color    = $imgs = $rpt_vals = $att_vals = $pos_val = $sz_val = null
@@ -15,9 +15,10 @@ background()
     if (length(arg) == 1)
       
       // BACKGROUND NONE
+      if ((arg == none))
+        background: none
       // BACKGROUND NONE
         
-
       //  BACKGROUND-COLOR 
       if (typeof(arg) == 'rgba')
         $color = arg
@@ -98,5 +99,3 @@ background()
 
 bg()
   background arguments
-/////  BACKGROUND //////
-///////////////////////  

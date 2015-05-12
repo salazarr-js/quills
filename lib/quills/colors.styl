@@ -1,13 +1,38 @@
 /////////////////////////
 /////  BACKGROUND //////
 
-bgs( )
+bg-class( )
   for $clase, $color in arguments
     .bg-{$clase}
       background: none
-      background-color: $color    
+      background-color: $color   
     
-txts( )
+
+text-class( )
   for $clase, $color in arguments
     .text-{$clase}
       color: $color    
+      
+color-class()
+  bg-class(arguments)
+  text-class(arguments)
+
+tricolor( color )
+  return {
+    color: color,
+    light: color + 75,
+    dark:  color - 25%
+  }
+  
+material-palette( primary accent )
+  return {
+    primary:        primary,
+    primary-light:  primary + 75%,
+    primary-dark:   primary - 25%,
+    accent:         accent,
+    text:           #FFFFFF,
+    primary-text:   #212121,
+    secondary-text: #727272,
+    divider:        #B6B6B6,
+    body:           #FAFAFA
+  }
