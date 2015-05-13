@@ -1,0 +1,19 @@
+
+hexa( color )
+  bg   color
+  size 100px 55px
+  relative()
+  &:before 
+    size          0
+    content       ""
+    absolute      top -25px left
+    border-left   50px solid transparent
+    border-right  50px solid transparent
+    border-bottom 25px solid color
+  &:after 
+    content      ""
+    absolute bottom -25px left    
+    size 0
+    border-left  50px solid transparent
+    border-right 50px solid transparent
+    border-top   25px solid color
