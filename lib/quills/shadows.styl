@@ -1,0 +1,41 @@
+
+//  REFERENCIA
+//  http://codepen.io/awesomephant/pen/mAxHz?editors=110
+//  http://sandbox.juan-i.com/longshadows/
+
+//////  FUNCION DE STYLUS PARA GENERAR EFECTO LONG-SHADOW
+_long-shadow(colorfondo = #0, lenght = 25, type = "text", fadeout = false) {
+  shadow = ''
+  px     = "px " 
+  px0    = "px 0 "
+  
+  if (lightness(colorfondo) > 20%){
+    color = rgb(lightness(colorfondo, (lightness(colorfondo) - 20%)))
+  }
+  else{
+    color = #0
+  }
+
+  if (!fadeout) {
+    for i in (1..lenght) {
+      shadow = shadow + i + px + i + px0 + color
+      if (i < lenght) { shadow = shadow + ", " }
+    }
+  }
+  
+  if (fadeout) {
+    for i in (1..lenght) {
+      b = 1 - i / lenght
+      shadow = shadow + i + px + i + px0 + rgba(color, b)
+      if (i < lenght) { shadow = shadow + ", " }  
+    }
+  }
+  
+  if type == "text" { text-shadow unquote(shadow) }
+  if type == "box"  { box-shadow  unquote(shadow) }
+}
+
+/////  LIMITANCIAS  //////
+// -> LOS COLORES NO TIENEN CANAL ALPHA ASI QUE NO INTERACTUARAN CON LOS ELEMENTOS O COLORES QUE TENGAN DE BACKGROUND
+// -> TIENE UN SOLO ANGULO Y DIRECCION (POR AHORA)
+// ->
