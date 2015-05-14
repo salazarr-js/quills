@@ -1,0 +1,7 @@
+opacity(op){
+  filter:         unquote('alpha(opacity=' + round(op * 100) + ')');
+  opacity:        op;
+  -ms-filter:     unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(op * 100) + ')');
+  -moz-opacity:   op;
+  -khtml-opacity: op;
+}

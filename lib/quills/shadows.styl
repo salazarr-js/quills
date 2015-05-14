@@ -4,13 +4,13 @@
 //  http://sandbox.juan-i.com/longshadows/
 
 //////  FUNCION DE STYLUS PARA GENERAR EFECTO LONG-SHADOW
-_long-shadow(colorfondo = #0, lenght = 25, type = "text", fadeout = false) {
+long-shadow(colorfondo = #0, lenght = 25, type = "text", fadeout = false) {
   shadow = ''
   px     = "px " 
   px0    = "px 0 "
   
-  if (lightness(colorfondo) > 20%){
-    color = rgb(lightness(colorfondo, (lightness(colorfondo) - 20%)))
+  if (lightness(colorfondo) > 25%){
+    color = rgb(lightness(colorfondo, (lightness(colorfondo) - 25%)))
   }
   else{
     color = #0
