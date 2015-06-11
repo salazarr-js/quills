@@ -1,6 +1,6 @@
 {
   "name": "quills",
-  "version": "0.0.12",
+  "version": "0.0.1",
   "description": "Mixins, utilidades, componentes y generadores de estilos css, para mejorar la experiencia de Stylus",
   "main": "lib/quills.js",
   "scripts": {
