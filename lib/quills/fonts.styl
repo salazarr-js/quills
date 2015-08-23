@@ -1,11 +1,13 @@
 font(nombre source)
   @font-face {
     font-family: nombre
-    src:         url(source + '.eot')
-    src:         url(source + '.eot#iefix') format('embedded-opentype'),
-                 url(source + '.woff')      format('woff'),
-                 url(source + '.ttf')       format('truetype'),
-                 url(source + '.svg')       format('svg');
     font-weight: normal;
     font-style:  normal;
+    font-style:  normal;
+    src:         url(source + '.eot')
+    src:         url(source + '.eot') format('embedded-opentype'),
+                 url(source + '.woff')      format('woff'),
+                 url(source + '.woff2')     format('woff2'),
+                 url(source + '.ttf')       format('truetype'),
+                 url(source + '.svg')       format('svg');
   }

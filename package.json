@@ -4,7 +4,7 @@
   "description": "Mixins, utilidades, componentes y generadores de estilos css, para mejorar la experiencia de Stylus",
   "main": "lib/quills.js",
   "scripts": {
-  	"preinstall": "npm install -g stylus",
+  	"preinstall": "npm install stylus",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
