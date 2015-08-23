@@ -1,6 +1,6 @@
 {
   "name": "quills",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Mixins, utilidades, componentes y generadores de estilos css, para mejorar la experiencia de Stylus",
   "main": "lib/quills.js",
   "scripts": {
@@ -14,7 +14,8 @@
     "quills",
     "css",
     "stylus",
-    "mixins"
+    "mixins",
+    "nib"
   ],
   "author": {
     "name": "Jose Salazar",

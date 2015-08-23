@@ -44,5 +44,4 @@ gulp.task('styles', function(){
   background-size: cover;
 }
 ```
-
 More Soon...
