@@ -5,7 +5,7 @@ Mixins, utilidades, componentes y generadores de estilos css, para mejorar la ex
 ## Instalacion
 Desde consola, teniendo instalado nodejs con npm ejecutas:
 ```
-$ npm install quills -g
+$ npm install quills
 ```
 
 ## Uso
@@ -17,8 +17,20 @@ Compila tu archivo .styl con stylus usando quills
 ```
 $ stylus -u quills archivo.styl
 ```
+Tambien puedes usarlo si compilas con gulp
+```
+var gulp   = require('gulp'),
+    stylus = require('gulp-stylus'),
+    quills = require('quills');
 
-###Backgrounds
+gulp.task('styles', function(){
+  gulp.src('app/styles/*.styl')
+    .pipe( stylus({ 'use': quills() }) )
+    .pipe(gulp.dest('app/styles'));
+ });
+```
+
+### Backgrounds
 
 ```
 .example-bg
@@ -32,3 +44,5 @@ $ stylus -u quills archivo.styl
   background-size: cover;
 }
 ```
+
+More Soon...

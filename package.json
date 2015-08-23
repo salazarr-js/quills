@@ -1,10 +1,9 @@
 {
   "name": "quills",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Mixins, utilidades, componentes y generadores de estilos css, para mejorar la experiencia de Stylus",
   "main": "lib/quills.js",
   "scripts": {
-  	"preinstall": "npm install stylus",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,13 +11,13 @@
     "url": "https://github.com/threenode/quills.git"
   },
   "keywords": [
-  	"quills",
+    "quills",
     "css",
     "stylus",
     "mixins"
   ],
   "author": {
-    "name":  "Jose Salazar",
+    "name": "Jose Salazar",
     "email": "jsalazar3300@gmail.com"
   },
   "license": "MIT",
@@ -28,5 +27,8 @@
   "homepage": "https://github.com/threenode/quills",
   "engines": {
     "node": "*"
+  },
+  "dependencies": {
+    "stylus": "^0.52.0"
   }
 }
