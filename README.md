@@ -1,6 +1,7 @@
-# Quills
-Mixins, utilidades, componentes y generadores de estilos css, para mejorar la experiencia de Stylus.
-> Inspirado en [Nib](http://tj.github.io/nib/ "Stylus - Nib")
+# 🪶 Quills
+Mixins, utils, and style generators for Stylus.
+
+> Inspirado en https://stylus.github.io/nib/
 
 ## Instalacion
 Desde consola, teniendo instalado nodejs con npm ejecutas:
